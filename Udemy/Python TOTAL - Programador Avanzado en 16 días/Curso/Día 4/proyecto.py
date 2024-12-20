@@ -21,7 +21,7 @@ while True:
 # Segundo bucle para el juego de adivinanza
 while numero_aleatorio != numero and contador < 8:
     contador += 1
-    if contador == 1008:
+    if contador == 8:
         break  # Rompemos el bucle si ya no quedan vidas
     elif numero < numero_aleatorio:
         print(f"Numero incorrecto, te quedan {8 - contador} vidas.")
