@@ -1,0 +1,34 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Orangel",
+      "place": "Venezuela",
+      "phone": "099373646"
+    },
+    {
+      "id": "2",
+      "name": "Enrique",
+      "place": "Caracas",
+      "phone": "27476567"
+    },
+    {
+      "id": "3",
+      "name": "Pedro",
+      "place": "prueba",
+      "phone": "38756583865"
+    },
+    {
+      "id": "3",
+      "name": "Pedro",
+      "place": "prueba",
+      "phone": "38756583865"
+    },
+    {
+      "id": "4",
+      "name": "Daniela",
+      "place": "prueba2",
+      "phone": "2345676543"
+    }
+  ]
+}
