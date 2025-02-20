@@ -1,28 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Message } from "./Message";
+import { useForm } from "../hooks/useForm";
 
 export const FormWithCustomHook = () => {
-  const [formState, setFormState] = useState({
-    username: "Orangel",
-    email: "correo@correo.com",
-  });
-
-  const { username, email } = formState;
-
-  const onInputChange = ({ target }) => {
-    const { name, value } = target;
-    setFormState({
-      ...formState,
-      [name]: value,
+  const { formState, onInputChange, onResetForm, username, email, password } =
+    useForm({
+      username: "",
+      email: "",
+      password: "",
     });
-  };
 
-  useEffect(() => {
-    console.log("useEffect");
-  }, [formState]);
-  useEffect(() => {
-    console.log("Cambió el email");
-  }, [email]);
+  // const { username, email, password } = formState;
 
   return (
     <>
@@ -38,8 +25,6 @@ export const FormWithCustomHook = () => {
         onChange={onInputChange}
       />
 
-      {username === "Orangel" && <Message />}
-
       <input
         type="email"
         className="form-control mt-2"
@@ -48,6 +33,18 @@ export const FormWithCustomHook = () => {
         email={email}
         onChange={onInputChange}
       />
+      <input
+        type="password"
+        className="form-control mt-2"
+        placeholder="Contraseña"
+        name="password"
+        value={password}
+        onChange={onInputChange}
+      />
+
+      <button onClick={onResetForm} className="btn btn-primary mt-2">
+        Reset
+      </button>
     </>
   );
 };
